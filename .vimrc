@@ -7,7 +7,7 @@ Plug 'tpope/vim-rails'
 " HTML less painful 
 Plug 'mattn/emmet-vim'
 " Good indenting for HTML
-Plug 'indenthtml.vim'
+Plug 'vim-scripts/indenthtml.vim'
 " Color Schemes
 Plug 'flazz/vim-colorschemes'
 call plug#end()
