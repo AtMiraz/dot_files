@@ -10,6 +10,8 @@ Plug 'mattn/emmet-vim'
 Plug 'vim-scripts/indenthtml.vim'
 " Color Schemes
 Plug 'flazz/vim-colorschemes'
+" CtrlP fuzzy finder
+Plug 'ctrlpvim/ctrlp.vim'
 call plug#end()
 
 " Displays the number of lines the file has
@@ -19,6 +21,11 @@ set number
 " displays the relative number, makes it easier to move around the editor.
 set relativenumber
 " Self explanatory
+set nobackup
+set nowritebackup
+set noswapfile 
 set autoindent
 set tabstop=2
-colorscheme pablo
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+colorscheme brogrammer 
