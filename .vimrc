@@ -12,6 +12,17 @@ Plug 'vim-scripts/indenthtml.vim'
 Plug 'flazz/vim-colorschemes'
 " CtrlP fuzzy finder
 Plug 'ctrlpvim/ctrlp.vim'
+" visual studio dark theme
+Plug 'tomasiser/vim-code-dark'
+" git status line
+Plug 'vim-airline/vim-airline'
+" javascript support for vim
+Plug 'pangloss/vim-javascript'
+" typescript support for vim
+Plug 'leafgarland/typescript-vim'
+" Plugin for JS libraries
+Plug 'othree/javascript-libraries-syntax.vim'
+
 call plug#end()
 
 " Displays the number of lines the file has
@@ -28,4 +39,5 @@ set autoindent
 set tabstop=2
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
-colorscheme brogrammer 
+colorscheme codedark
+let g:airline_theme = 'codedark'
