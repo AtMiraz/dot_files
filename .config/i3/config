@@ -84,16 +84,16 @@ workspace 7 output eDP
 workspace 8 output eDP
 workspace 9 output eDP
 workspace 10 output eDP
-set $ws1 "1:  "
-set $ws2 "2:  "
-set $ws3 "3:  "
-set $ws4 "4: "
-set $ws5 "5: "
-set $ws6 "6: "
-set $ws7 "7: "
-set $ws8 "8: "
-set $ws9 "9: "
-set $ws10 "10: "
+set $ws1 "1:  code"
+set $ws2 "2:  term"
+set $ws3 "3:  web"
+set $ws4 "4:  files"
+set $ws5 "5:  misc"
+set $ws6 "6:  misc"
+set $ws7 "7:  misc"
+set $ws8 "8:  git"
+set $ws9 "9:  slack"
+set $ws10 "10:  spotify"
 
 # Wallpaper
 set $wp ~/Pictures/wallpapers/wallp2.png
