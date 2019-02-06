@@ -40,7 +40,7 @@ font-3 = FontAwesome:style=Regular:pixelsize=9;
 
 modules-left = i3
 modules-center = xwindow
-modules-right = alsa xkeyboard memory cpu battery date powermenu
+modules-right = alsa eth wlan xkeyboard memory cpu battery date powermenu
 
 tray-position = right
 tray-padding = 2
@@ -242,7 +242,7 @@ ramp-signal-foreground = ${colors.foreground-alt}
 
 [module/eth]
 type = internal/network
-interface = 
+interface = enp2s0
 interval = 3.0
 
 format-connected-underline = #55aa55
