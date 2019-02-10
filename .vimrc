@@ -10,10 +10,11 @@ Plug 'mattn/emmet-vim'
 Plug 'vim-scripts/indenthtml.vim'
 " Color Schemes
 Plug 'flazz/vim-colorschemes'
+Plug 'tomasiser/vim-code-dark'
+Plug 'ayu-theme/ayu-vim'
+Plug 'nlknguyen/papercolor-theme'
 " CtrlP fuzzy finder
 Plug 'ctrlpvim/ctrlp.vim'
-" visual studio dark theme
-Plug 'tomasiser/vim-code-dark'
 " git status line
 Plug 'vim-airline/vim-airline'
 " javascript support for vim
@@ -48,7 +49,11 @@ set autoindent
 set softtabstop=2
 set tabstop=2
 set shiftwidth=2
-colorscheme codedark
+
+" Ayu theme config
+set termguicolors
+let ayucolor="mirage"
+colorscheme ayu
 
 " CtrlP configuration
 let g:ctrlp_map = '<c-p>'
@@ -71,4 +76,4 @@ let g:airline_symbols.linenr = '☰'
 let g:airline_symbols.maxlinenr = ''
 let g:airline_powerline_fonts = 1
 " Airline color scheme
-let g:airline_theme = 'codedark'
+let g:airline_theme = 'papercolor'
