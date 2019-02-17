@@ -4,3 +4,4 @@
 - [Roboto Mono ](https://fonts.google.com/specimen/Roboto+Mono)
 - [Polybar](https://github.com/jaagr/polybar)
 - Color Scheme based on [VIM Ayu color Scheme](https://github.com/ayu-theme/ayu-vim)
+- mate-power-manager
