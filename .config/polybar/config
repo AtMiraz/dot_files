@@ -263,7 +263,7 @@ format-disconnected =
 type = internal/date
 interval = 5
 
-date =  %%{F#99} %m/%d/%Y %%{F-} %%{F#fff} %I:%M %p%{F-}
+date = %%{F#fff} %m/%d/%Y %I:%M %p%{F-}
 
 format-prefix = 
 format-prefix-foreground = ${colors.foreground-alt}
