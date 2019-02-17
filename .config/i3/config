@@ -208,6 +208,7 @@ exec_always feh --bg-fill $wp
 exec --no-startup-id compton -fc
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec_always --no-startup-id nm-applet
+exec_always --no-startup-id mate-power-manager
 
 # removes title bars
 for_window [class="^.*"] border pixel 0
