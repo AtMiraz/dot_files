@@ -204,7 +204,7 @@ floating_minimum_size 400 x 400
 floating_maximum_size 1280 x 720
 
 # startup programs
-exec_always feh --bg-fill $wp
+exec_always --no-startup-id feh --bg-fill $wp
 exec --no-startup-id compton -fc
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec_always --no-startup-id nm-applet
