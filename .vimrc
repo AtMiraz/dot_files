@@ -1,5 +1,5 @@
 " My plugin manager is Plug
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.local/share/nvim/plugged')
 " Proyect tree plugin.
 Plug 'scrooloose/nerdtree'
 " Use rails commands inside vim
@@ -31,6 +31,8 @@ Plug 'xuyuanp/nerdtree-git-plugin'
 Plug 'vim-airline/vim-airline-themes'
 " Fugitive vim for git integration
 Plug 'tpope/vim-fugitive'
+" Git changes tracker
+Plug 'airblade/vim-gitgutter'
 
 call plug#end()
 
