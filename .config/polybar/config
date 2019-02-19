@@ -1,11 +1,13 @@
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #212733
+background = #c0000000
+;background = #212733
 background-alt = #444
 ;foreground = ${xrdb:color7:#222}
 foreground = #D9D7CE
 foreground-alt = #555
-primary = #BBE67E
+primary = #8dbdc6
+;primary = #BBE67E
 secondary = #e60053
 alert = #bd2c40
 
@@ -42,7 +44,7 @@ font-5 = Font Awesome 5 Brands Regular:pixelsize=10;3
 
 modules-left = i3
 modules-center = xwindow
-modules-right = alsa eth wlan xkeyboard memory cpu battery date powermenu
+modules-right = alsa xkeyboard memory cpu date
 
 tray-position = right
 tray-padding = 2
@@ -263,7 +265,8 @@ format-disconnected =
 type = internal/date
 interval = 5
 
-date = %%{F#fff} %m/%d/%Y %I:%M %p%{F-}
+date = %%{F#fff} %I:%M %p%{F-}
+date-alt = %%{F#fff} %m/%d/%Y %I:%M %p%{F-}
 
 format-prefix = 
 format-prefix-foreground = ${colors.foreground-alt}
