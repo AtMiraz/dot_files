@@ -33,6 +33,8 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
 " Git changes tracker
 Plug 'airblade/vim-gitgutter'
+" surround 
+Plug 'tpope/vim-surround'
 
 call plug#end()
 
@@ -79,3 +81,14 @@ let g:airline_symbols.maxlinenr = ''
 let g:airline_powerline_fonts = 1
 " Airline color scheme
 let g:airline_theme = 'papercolor'
+" autocompletes common programming words
+inoremap " ""<left>
+inoremap ' ''<left>
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap { {}<left>
+inoremap {<CR> {<CR>}<ESC>O
+inoremap {;<CR> {<CR>};<ESC>O
+" reduce vim update time to show git gutter changes faster
+set updatetime=100
+
