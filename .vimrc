@@ -9,12 +9,9 @@ Plug 'mattn/emmet-vim'
 " Good indenting for HTML
 Plug 'vim-scripts/indenthtml.vim'
 " Color Schemes
-Plug 'flazz/vim-colorschemes'
-Plug 'tomasiser/vim-code-dark'
 Plug 'ayu-theme/ayu-vim'
 Plug 'nlknguyen/papercolor-theme'
-" CtrlP fuzzy finder
-Plug 'ctrlpvim/ctrlp.vim'
+Plug 'arcticicestudio/nord-vim'
 " git status line
 Plug 'vim-airline/vim-airline'
 " javascript support for vim
@@ -24,7 +21,7 @@ Plug 'leafgarland/typescript-vim'
 " Plugin for JS libraries
 Plug 'othree/javascript-libraries-syntax.vim'
 " respect .editorconfig files
- Plug 'editorconfig/editorconfig-vim'
+Plug 'editorconfig/editorconfig-vim'
 " Git NERDTree integration
 Plug 'xuyuanp/nerdtree-git-plugin'
 " airline themes
@@ -35,7 +32,13 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 " surround 
 Plug 'tpope/vim-surround'
-
+" fuzzy file finder for vim
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
+"linting
+Plug 'w0rp/ale'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'steelsojka/deoplete-flow'
 call plug#end()
 
 " Displays the number of lines the file has
@@ -44,10 +47,12 @@ set number
 " have the cursor displays the actual line, then from top and bottom it
 " displays the relative number, makes it easier to move around the editor.
 set relativenumber
+
 " Self explanatory
 set nobackup
 set nowritebackup
 set noswapfile
+
 " Intendation, tab is 2 spaces.
 set autoindent
 set softtabstop=2
@@ -56,12 +61,12 @@ set shiftwidth=2
 
 " Ayu theme config
 set termguicolors
-let ayucolor="mirage"
+let ayucolor="nord"
 colorscheme ayu
 
-" CtrlP configuration
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
+" Map FZF to CtrlP
+nnoremap <silent> <C-p> :FZF<CR>
+nnoremap <silent> <C-n> :Ag<CR>
 
 " airline configurations
 let g:airline#extensions#tabline#enabled = 1
@@ -91,4 +96,6 @@ inoremap {<CR> {<CR>}<ESC>O
 inoremap {;<CR> {<CR>};<ESC>O
 " reduce vim update time to show git gutter changes faster
 set updatetime=100
-
+let g:deoplete#enable_at_startup = 1
+let g:deoplete#sources#flow#flow_bin = 'flow' 
+let g:EditorConfig_core_mode = 'external_command'
