@@ -4,6 +4,9 @@ export ZSH=$HOME/.oh-my-zsh
 # Spaceship prompt theme
 ZSH_THEME="spaceship"
 
+# Starts tmux on login
+ZSH_TMUX_AUTOSTART=true
+
 # Case sensitive completion
 # CASE_SENSITIVE="true"
 
@@ -15,11 +18,11 @@ ENABLE_CORRECTION="true"
 
 
 # Plugins load
-plugins=(git)
+plugins=(git, tmux)
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
 # loads nvm
-[[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh  # This loads NVM
+[[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh
