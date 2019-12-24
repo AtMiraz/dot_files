@@ -1,6 +1,8 @@
 # Path to oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
+ZSH_TMUX_AUTOSTART=true
+
 # Spaceship prompt theme
 ZSH_THEME="spaceship"
 
@@ -26,3 +28,8 @@ source $ZSH/oh-my-zsh.sh
 
 # loads nvm
 [[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh
+
+# Loads FZF
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# Needs to install the_silver_searcher in order for this to work
+export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git --ignore node_modules --ignore Library -g ""'
