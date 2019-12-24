@@ -54,7 +54,7 @@ set softtabstop=0
 set shiftwidth=2
 set smarttab
 
-" set termguicolors
+set termguicolors " comment this if using WSL
 syntax on
 colorscheme onedark
 
