@@ -70,12 +70,24 @@ inoremap [ []<left>
 inoremap { {}<left>
 inoremap {<CR> {<CR>}<ESC>O
 inoremap {;<CR> {<CR>};<ESC>O
+
 " reduce vim update time to show git gutter changes faster
 set updatetime=100
+" uncomment if lightline is not correctly
+" set laststatus=2
+
+" show trailing white spaces on normal mode
+highlight ExtraWhiteSpace ctermbg=red guibg=red
+match ExtraWhiteSpace /\s\+$/
+" don't paint trailing white spaces while on insert mode
+au InsertEnter * match ExtraWhiteSpace /\s\+\%#\@<!$/
+au InsertLeave * match ExtraWhiteSpace /\s\+$/
+
 let g:ale_linters = {
-			\ 'javascript': ['eslint'],
-			\ 'typescript': ['tslint']
-			\}
+	\ 'javascript': ['eslint'],
+	\ 'typescript': ['tslint']
+	\}
+
 let g:ale_linters_explicit = 1
 let g:ale_lint_delay = 1000
 
