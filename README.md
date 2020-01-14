@@ -7,3 +7,5 @@
 - Shell is zsh
 - Oh-my-zsh
 - mate-power-manager
+- tmux
+- nvim/vim
