@@ -85,7 +85,9 @@ au InsertLeave * match ExtraWhiteSpace /\s\+$/
 
 let g:ale_linters = {
 	\ 'javascript': ['eslint'],
-	\ 'typescript': ['tslint']
+	\ 'typescript': ['tslint'],
+	\ 'vue': ['eslint'],
+	\ 'jsx': ['eslint'],
 	\}
 
 let g:ale_linters_explicit = 1
