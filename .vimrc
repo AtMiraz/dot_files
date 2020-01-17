@@ -31,9 +31,18 @@ Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 " Vue syntax hightlighting & lint
 Plug 'posva/vim-vue'
+" Syntax checking
 Plug 'dense-analysis/ale'
+" Highlight CSS colors by name / hex code
+Plug 'gorodinskiy/vim-coloresque'
+" Git integration
+Plug 'tpope/vim-fugitive'
+" Intellisense
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
+" Enables switching buffers without saving to disk
+set hidden
 " Displays the number of lines the file has
 set number
 " Displays the number of lines relative to where you are, the line where you
