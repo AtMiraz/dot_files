@@ -2,7 +2,7 @@
 export ZSH=$HOME/.oh-my-zsh
 
 # Spaceship prompt theme
-ZSH_THEME="spaceship"
+ZSH_THEME=powerlevel10k/powerlevel10k
 
 # Starts tmux on login
 ZSH_TMUX_AUTOSTART=true
