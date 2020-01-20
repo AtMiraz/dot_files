@@ -39,6 +39,8 @@ Plug 'gorodinskiy/vim-coloresque'
 Plug 'tpope/vim-fugitive'
 " Intellisense
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Easier comments
+Plug 'tomtom/tcomment_vim'
 call plug#end()
 
 " Enables switching buffers without saving to disk
