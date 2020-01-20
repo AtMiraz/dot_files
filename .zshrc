@@ -1,8 +1,6 @@
 # Path to oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
-ZSH_TMUX_AUTOSTART=true
-
 # Spaceship prompt theme
 ZSH_THEME="spaceship"
 
