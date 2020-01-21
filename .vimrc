@@ -84,7 +84,7 @@ inoremap {;<CR> {<CR>};<ESC>O
 
 " Replace '@' webpack alias to 'src/'
 set includeexpr=substitute(v:fname,'^@/','src/','')
-set suffixesadd=.js,.vue,.scss,css
+set suffixesadd=.js,.vue,.scss,.css
 set isfname+=@-@
 
 " show trailing white spaces on normal mode
