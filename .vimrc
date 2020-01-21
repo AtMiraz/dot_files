@@ -82,10 +82,10 @@ inoremap { {}<left>
 inoremap {<CR> {<CR>}<ESC>O
 inoremap {;<CR> {<CR>};<ESC>O
 
-" reduce vim update time to show git gutter changes faster
-set updatetime=100
-" uncomment if lightline is not correctly
-" set laststatus=2
+" Replace '@' webpack alias to 'src/'
+set includeexpr=substitute(v:fname,'^@/','src/','')
+set suffixesadd=.js,.vue,.scss,css
+set isfname+=@-@
 
 " show trailing white spaces on normal mode
 highlight ExtraWhiteSpace ctermbg=red guibg=red
@@ -94,14 +94,29 @@ match ExtraWhiteSpace /\s\+$/
 au InsertEnter * match ExtraWhiteSpace /\s\+\%#\@<!$/
 au InsertLeave * match ExtraWhiteSpace /\s\+$/
 
+" reduce vim update time to show git gutter changes faster
+set updatetime=100
+" uncomment if lightline is not correctly
+" set laststatus=2
+
 let g:ale_linters = {
-	\ 'javascript': ['eslint'],
-	\ 'typescript': ['tslint'],
-	\ 'vue': ['eslint'],
-	\ 'jsx': ['eslint'],
-	\}
+	\'javascript': ['eslint'],
+	\'typescript': ['tslint'],
+	\'vue': ['eslint'],
+	\'jsx': ['eslint'],
+\}
 
 let g:ale_linters_explicit = 1
 let g:ale_lint_delay = 1000
 
 let g:vue_pre_processors = []
+
+let g:lightline = {
+	\'active': {
+	\	'left': [ ['mode', 'paste'],
+	\	[ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+	\},
+	\'component_function': {
+	\	'gitbranch': 'fugitive#head'
+	\},
+\}
