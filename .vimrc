@@ -14,10 +14,6 @@ Plug 'joshdick/onedark.vim'
 Plug 'morhetz/gruvbox'
 " VIM status line
 Plug 'itchyny/lightline.vim'
-" javascript support for vim
-Plug 'pangloss/vim-javascript'
-" TS support
-Plug 'leafgarland/typescript-vim'
 " respect .editorconfig files
 Plug 'editorconfig/editorconfig-vim'
 " Git NERDTree integration
@@ -29,9 +25,7 @@ Plug 'tpope/vim-surround'
 " fuzzy file finder for vim
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
-" Vue syntax hightlighting & lint
-Plug 'posva/vim-vue'
-" Syntax checking
+" Linting
 Plug 'dense-analysis/ale'
 " Highlight CSS colors by name / hex code
 Plug 'gorodinskiy/vim-coloresque'
@@ -41,6 +35,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Easier comments
 Plug 'tomtom/tcomment_vim'
+" AIO syntax highlighting
+Plug 'sheerun/vim-polyglot'
 call plug#end()
 
 " Enables switching buffers without saving to disk
@@ -73,19 +69,19 @@ colorscheme onedark
 nnoremap <silent> <C-p> :FZF<CR>
 nnoremap <silent> <C-n> :Ag<CR>
 
-" autocompletes common programming words
-inoremap " ""<left>
-inoremap ' ''<left>
-inoremap ( ()<left>
-inoremap [ []<left>
-inoremap { {}<left>
-inoremap {<CR> {<CR>}<ESC>O
-inoremap {;<CR> {<CR>};<ESC>O
+" autocompletes common programming symbols
+autocmd FileType vue,javascript,typescript inoremap " ""<left>
+autocmd FileType vue,javascript,typescript inoremap ' ''<left>
+autocmd FileType vue,javascript,typescript inoremap ( ()<left>
+autocmd FileType vue,javascript,typescript inoremap [ []<left>
+autocmd FileType vue,javascript,typescript inoremap { {}<left>
+autocmd FileType vue,javascript,typescript inoremap {<CR> {<CR>}<ESC>O
+autocmd FileType vue,javascript,typescript inoremap {;<CR> {<CR>};<ESC>O
 
-" Replace '@' webpack alias to 'src/'
-set includeexpr=substitute(v:fname,'^@/','src/','')
-set suffixesadd=.js,.vue,.scss,.css
-set isfname+=@-@
+" reduce vim update time to show git gutter changes faster
+set updatetime=100
+" uncomment if lightline is not correctly
+" set laststatus=2
 
 " show trailing white spaces on normal mode
 highlight ExtraWhiteSpace ctermbg=red guibg=red
@@ -94,10 +90,13 @@ match ExtraWhiteSpace /\s\+$/
 au InsertEnter * match ExtraWhiteSpace /\s\+\%#\@<!$/
 au InsertLeave * match ExtraWhiteSpace /\s\+$/
 
-" reduce vim update time to show git gutter changes faster
-set updatetime=100
-" uncomment if lightline is not correctly
-" set laststatus=2
+" Replace '@' webpack alias to 'src/'
+set includeexpr=substitute(v:fname,'^@/','src/','')
+set suffixesadd=.js,.vue,.scss,.css
+set isfname+=@-@
+
+let g:ale_linters_explicit = 1
+let g:ale_lint_delay = 1000
 
 let g:ale_linters = {
 	\'javascript': ['eslint'],
@@ -105,11 +104,6 @@ let g:ale_linters = {
 	\'vue': ['eslint'],
 	\'jsx': ['eslint'],
 \}
-
-let g:ale_linters_explicit = 1
-let g:ale_lint_delay = 1000
-
-let g:vue_pre_processors = []
 
 let g:lightline = {
 	\'active': {
