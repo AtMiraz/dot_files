@@ -9,3 +9,8 @@
 - mate-power-manager
 - tmux
 - nvim/vim
+  - installed Coc.nvim extensions:
+    - coc-pairs
+    - coc-vetur
+    - coc-json
+    - coc-tsserver
