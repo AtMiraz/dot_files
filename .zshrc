@@ -31,3 +31,5 @@ source $ZSH/oh-my-zsh.sh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 # Needs to install the_silver_searcher in order for this to work
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git --ignore node_modules --ignore Library -g ""'
+
+alias vim="nvim" # Uncomment if using Vim8 instead of neovim
