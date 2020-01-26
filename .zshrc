@@ -18,7 +18,7 @@ ENABLE_CORRECTION="true"
 
 
 # Plugins load
-plugins=(git, tmux)
+plugins=(git tmux)
 
 source $ZSH/oh-my-zsh.sh
 
